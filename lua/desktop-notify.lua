@@ -45,6 +45,7 @@ function M.open_history()
 	local winnr = vim.api.nvim_get_current_win()
 
 	vim.api.nvim_win_set_buf(winnr, bufnr)
+	vim.api.nvim_win_set_option(winnr, "wrap", true)
 
 	local line = 0
 	for i, value in ipairs(M.history) do
