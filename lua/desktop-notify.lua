@@ -32,11 +32,11 @@ end
 
 function M.open_history()
 	local ui_height = vim.api.nvim_list_uis()[1].height
-	local split_height = #M.history + 1
+	-- local split_height = #M.history + 1
 
-	if ui_height / 2 < split_height then
-		split_height = ui_height / 2
-	end
+	-- if ui_height / 2 < split_height then
+	local split_height = ui_height / 3
+	-- end
 
 	vim.cmd("split")
 	vim.cmd("resize " .. split_height)
